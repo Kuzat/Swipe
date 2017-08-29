@@ -6,9 +6,9 @@ public class Score : MonoBehaviour {
 
 	private static int score;
 	public Text scoreText;
+	public Text highScore;
 
 	void Start () {
-		//DontDestroyOnLoad (gameObject);
 		if (score > PlayerPrefs.GetInt ("highscore")) {
 			PlayerPrefs.SetInt ("highscore", score);
 		}
@@ -31,7 +31,12 @@ public class Score : MonoBehaviour {
 	}
 
 	private void UpdateScoreText() {
-		scoreText.text = score.ToString();
+		if (scoreText != null) {
+			scoreText.text = score.ToString();	
+		}
+		if (highScore != null) {
+			highScore.text = PlayerPrefs.GetInt ("highscore").ToString();
+		}
 	}
 
 	// Update is called once per frame

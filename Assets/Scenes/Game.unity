@@ -414,6 +414,10 @@ Prefab:
       propertyPath: speed
       value: 300
       objectReference: {fileID: 0}
+    - target: {fileID: 11497134, guid: b1e3851fc236df547ab47cfeec5232ae, type: 2}
+      propertyPath: totalTime
+      value: 0.75
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b1e3851fc236df547ab47cfeec5232ae, type: 2}
   m_IsPrefabParent: 0
@@ -498,6 +502,8 @@ MonoBehaviour:
   swipeDetector: {fileID: 1132118709}
   score: {fileID: 857585259}
   graphics: {fileID: 1655747616}
+  minimumTime: 0.4773
+  scaling: 9
   up: {fileID: 212000013245373688, guid: f1b5599fa91561744b9bd1942ca3ff96, type: 2}
   down: {fileID: 212000013120328394, guid: 7166c46dc5edf9e43bee3bd90662c366, type: 2}
   left: {fileID: 212000012837085322, guid: 0634b277df1d6754bb1bef82dd4432f0, type: 2}

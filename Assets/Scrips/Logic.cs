@@ -7,6 +7,8 @@ public class Logic : MonoBehaviour {
 	public SwipeDetector swipeDetector;
 	public Score score;
 	public Graphics graphics;
+	public float minimumTime = 0.513F;
+	public float scaling = 10.0F;
 	KeyCode key;
 	private float timeLeft;
 	private float totalDuration;
@@ -31,7 +33,7 @@ public class Logic : MonoBehaviour {
 	void Update() {
 		timeLeft -= Time.deltaTime;
 		if (timeLeft < 0) {
-			//WrongMove ();
+			WrongMove ();
 		}
 		graphics.updateBackgroundColor (move, 1 - timeLeft / totalDuration);
 		GetRightMove ();
@@ -97,7 +99,7 @@ public class Logic : MonoBehaviour {
 	}
 
 	private float getRoundTime(int roundNumber) {
-		return (3f / (Mathf.Exp (roundNumber / 10f))) + 0.515f;
+		return (3f / (Mathf.Exp (roundNumber / scaling))) + minimumTime;
 	}
 
 	private SpriteRenderer getRandomMove() {

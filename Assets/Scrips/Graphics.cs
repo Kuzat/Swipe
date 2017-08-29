@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Graphics : MonoBehaviour {
 
-	public new Camera camera;
+	public Camera camera;
 	public float totalTime = 10;
 
 	private Color color;
